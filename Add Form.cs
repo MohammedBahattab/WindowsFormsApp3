@@ -17,12 +17,14 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-        public string CS = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\XPRISTO\\Desktop\\New folder (5)\\الجامعة\\OOP\\unv-ga\\WindowsFormsApp3\\Car rente.mdf\";Integrated Security=True";
+        private string CS = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\XPRISTO\\Desktop\\New folder (5)\\الجامعة\\OOP\\unv-ga\\WindowsFormsApp3\\Car rente.mdf\";Integrated Security=True";
         private string AddQ = "INSERT INTO Cars (Car_Model, Car_Color, Car_plate, Car_Compny) VALUES (@Car_Model,@Car_Color,@Car_plate,@Car_Compny)";
 
         private void Add_Form_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'car_renteDataSet1.Cars' table. You can move, or remove it, as needed.
+            this.carsTableAdapter.Fill(this.car_renteDataSet1.Cars);
+
         }
 
         private void button1_Click(object sender, EventArgs e)

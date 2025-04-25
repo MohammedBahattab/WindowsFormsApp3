@@ -67,6 +67,16 @@
     <Compile Include="Add Form.Designer.cs">
       <DependentUpon>Add Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car_renteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_renteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Car_renteDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_renteDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Delete Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +94,9 @@
     <EmbeddedResource Include="Add Form.resx">
       <DependentUpon>Add Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Delete Form.resx">
+      <DependentUpon>Delete Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +109,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Car_renteDataSet.xsc">
+      <DependentUpon>Car_renteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_renteDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_renteDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_renteDataSet.xss">
+      <DependentUpon>Car_renteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Car_renteDataSet1.xsc">
+      <DependentUpon>Car_renteDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Car_renteDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_renteDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_renteDataSet1.xss">
+      <DependentUpon>Car_renteDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +164,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

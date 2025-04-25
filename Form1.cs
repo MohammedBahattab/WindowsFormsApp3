@@ -20,7 +20,13 @@ namespace WindowsFormsApp3
         private void button1_Click(object sender, EventArgs e)
         {
             Add_Form add_Form = new Add_Form();
-            add_Form.ShowDialog();
+            add_Form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Delete_Form delete_Form = new Delete_Form();
+            delete_Form.Show();
         }
     }
 }
