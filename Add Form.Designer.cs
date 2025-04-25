@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carColorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carplateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carCompnyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isRentedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.car_renteDataSet1 = new WindowsFormsApp3.Car_renteDataSet1();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,20 +50,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.car_renteDataSet1 = new WindowsFormsApp3.Car_renteDataSet1();
-            this.carsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.carsTableAdapter = new WindowsFormsApp3.Car_renteDataSet1TableAdapters.CarsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carModelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carColorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carplateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carCompnyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isRentedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.car_renteDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_renteDataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -79,10 +79,62 @@
             this.dataGridView1.Size = new System.Drawing.Size(597, 203);
             this.dataGridView1.TabIndex = 0;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // carModelDataGridViewTextBoxColumn
+            // 
+            this.carModelDataGridViewTextBoxColumn.DataPropertyName = "Car_Model";
+            this.carModelDataGridViewTextBoxColumn.HeaderText = "Car_Model";
+            this.carModelDataGridViewTextBoxColumn.Name = "carModelDataGridViewTextBoxColumn";
+            this.carModelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // carColorDataGridViewTextBoxColumn
+            // 
+            this.carColorDataGridViewTextBoxColumn.DataPropertyName = "Car_Color";
+            this.carColorDataGridViewTextBoxColumn.HeaderText = "Car_Color";
+            this.carColorDataGridViewTextBoxColumn.Name = "carColorDataGridViewTextBoxColumn";
+            this.carColorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // carplateDataGridViewTextBoxColumn
+            // 
+            this.carplateDataGridViewTextBoxColumn.DataPropertyName = "Car_plate";
+            this.carplateDataGridViewTextBoxColumn.HeaderText = "Car_plate";
+            this.carplateDataGridViewTextBoxColumn.Name = "carplateDataGridViewTextBoxColumn";
+            this.carplateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // carCompnyDataGridViewTextBoxColumn
+            // 
+            this.carCompnyDataGridViewTextBoxColumn.DataPropertyName = "Car_Compny";
+            this.carCompnyDataGridViewTextBoxColumn.HeaderText = "Car_Compny";
+            this.carCompnyDataGridViewTextBoxColumn.Name = "carCompnyDataGridViewTextBoxColumn";
+            this.carCompnyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // isRentedDataGridViewCheckBoxColumn
+            // 
+            this.isRentedDataGridViewCheckBoxColumn.DataPropertyName = "isRented";
+            this.isRentedDataGridViewCheckBoxColumn.HeaderText = "isRented";
+            this.isRentedDataGridViewCheckBoxColumn.Name = "isRentedDataGridViewCheckBoxColumn";
+            this.isRentedDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // carsBindingSource
+            // 
+            this.carsBindingSource.DataMember = "Cars";
+            this.carsBindingSource.DataSource = this.car_renteDataSet1;
+            // 
+            // car_renteDataSet1
+            // 
+            this.car_renteDataSet1.DataSetName = "Car_renteDataSet1";
+            this.car_renteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 33);
+            this.label1.Location = new System.Drawing.Point(19, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -91,7 +143,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 77);
+            this.label2.Location = new System.Drawing.Point(19, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 2;
@@ -100,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(294, 84);
+            this.label3.Location = new System.Drawing.Point(237, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 3;
@@ -109,7 +161,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(281, 33);
+            this.label4.Location = new System.Drawing.Point(237, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 4;
@@ -117,28 +169,28 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(78, 30);
+            this.txtName.Location = new System.Drawing.Point(22, 33);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(180, 20);
             this.txtName.TabIndex = 5;
             // 
             // txtcolor
             // 
-            this.txtcolor.Location = new System.Drawing.Point(78, 77);
+            this.txtcolor.Location = new System.Drawing.Point(22, 80);
             this.txtcolor.Name = "txtcolor";
             this.txtcolor.Size = new System.Drawing.Size(180, 20);
             this.txtcolor.TabIndex = 6;
             // 
             // txtcompny
             // 
-            this.txtcompny.Location = new System.Drawing.Point(350, 30);
+            this.txtcompny.Location = new System.Drawing.Point(240, 33);
             this.txtcompny.Name = "txtcompny";
             this.txtcompny.Size = new System.Drawing.Size(180, 20);
             this.txtcompny.TabIndex = 7;
             // 
             // txtplaet
             // 
-            this.txtplaet.Location = new System.Drawing.Point(350, 77);
+            this.txtplaet.Location = new System.Drawing.Point(240, 80);
             this.txtplaet.Name = "txtplaet";
             this.txtplaet.Size = new System.Drawing.Size(180, 20);
             this.txtplaet.TabIndex = 8;
@@ -192,61 +244,9 @@
             this.panel1.Size = new System.Drawing.Size(597, 120);
             this.panel1.TabIndex = 12;
             // 
-            // car_renteDataSet1
-            // 
-            this.car_renteDataSet1.DataSetName = "Car_renteDataSet1";
-            this.car_renteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // carsBindingSource
-            // 
-            this.carsBindingSource.DataMember = "Cars";
-            this.carsBindingSource.DataSource = this.car_renteDataSet1;
-            // 
             // carsTableAdapter
             // 
             this.carsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // carModelDataGridViewTextBoxColumn
-            // 
-            this.carModelDataGridViewTextBoxColumn.DataPropertyName = "Car_Model";
-            this.carModelDataGridViewTextBoxColumn.HeaderText = "Car_Model";
-            this.carModelDataGridViewTextBoxColumn.Name = "carModelDataGridViewTextBoxColumn";
-            this.carModelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // carColorDataGridViewTextBoxColumn
-            // 
-            this.carColorDataGridViewTextBoxColumn.DataPropertyName = "Car_Color";
-            this.carColorDataGridViewTextBoxColumn.HeaderText = "Car_Color";
-            this.carColorDataGridViewTextBoxColumn.Name = "carColorDataGridViewTextBoxColumn";
-            this.carColorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // carplateDataGridViewTextBoxColumn
-            // 
-            this.carplateDataGridViewTextBoxColumn.DataPropertyName = "Car_plate";
-            this.carplateDataGridViewTextBoxColumn.HeaderText = "Car_plate";
-            this.carplateDataGridViewTextBoxColumn.Name = "carplateDataGridViewTextBoxColumn";
-            this.carplateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // carCompnyDataGridViewTextBoxColumn
-            // 
-            this.carCompnyDataGridViewTextBoxColumn.DataPropertyName = "Car_Compny";
-            this.carCompnyDataGridViewTextBoxColumn.HeaderText = "Car_Compny";
-            this.carCompnyDataGridViewTextBoxColumn.Name = "carCompnyDataGridViewTextBoxColumn";
-            this.carCompnyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // isRentedDataGridViewCheckBoxColumn
-            // 
-            this.isRentedDataGridViewCheckBoxColumn.DataPropertyName = "isRented";
-            this.isRentedDataGridViewCheckBoxColumn.HeaderText = "isRented";
-            this.isRentedDataGridViewCheckBoxColumn.Name = "isRentedDataGridViewCheckBoxColumn";
-            this.isRentedDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // label5
             // 
@@ -273,10 +273,10 @@
             this.Text = "Add_Form";
             this.Load += new System.EventHandler(this.Add_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.car_renteDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.car_renteDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.carsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

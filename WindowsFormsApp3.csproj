@@ -67,6 +67,12 @@
     <Compile Include="Add Form.Designer.cs">
       <DependentUpon>Add Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car Rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Car Rental.Designer.cs">
+      <DependentUpon>Car Rental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Car_renteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Car_renteDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Car_renteDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Car_renteDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Delete Form.cs">
       <SubType>Form</SubType>
@@ -93,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add Form.resx">
       <DependentUpon>Add Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Car Rental.resx">
+      <DependentUpon>Car Rental.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete Form.resx">
       <DependentUpon>Delete Form.cs</DependentUpon>
@@ -130,6 +144,17 @@
     </None>
     <None Include="Car_renteDataSet1.xss">
       <DependentUpon>Car_renteDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Car_renteDataSet2.xsc">
+      <DependentUpon>Car_renteDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Car_renteDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Car_renteDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Car_renteDataSet2.xss">
+      <DependentUpon>Car_renteDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
