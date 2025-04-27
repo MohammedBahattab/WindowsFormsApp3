@@ -4,20 +4,27 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp3
 {
     public partial class Add_Form : Form
     {
+        string CS;
         public Add_Form()
         {
             InitializeComponent();
-        }
-        private string CS = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\XPRISTO\\Desktop\\New folder (5)\\الجامعة\\OOP\\unv-ga\\WindowsFormsApp3\\Car rente.mdf\";Integrated Security=True";
+
+            string dbPath = Path.Combine(Application.StartupPath, "Car rente.mdf");
+             CS = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True";
+
+          }
+      
         private string AddQ = "INSERT INTO Cars (Car_Model, Car_Color, Car_plate, Car_Compny) VALUES (@Car_Model,@Car_Color,@Car_plate,@Car_Compny)";
 
         private void Add_Form_Load(object sender, EventArgs e)
@@ -36,7 +43,7 @@ namespace WindowsFormsApp3
         {
             this.Close();
         }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtName.Text)&& string.IsNullOrEmpty(txtcolor.Text)&& string.IsNullOrEmpty(txtcompny.Text)&& string.IsNullOrEmpty(txtplaet.Text))
